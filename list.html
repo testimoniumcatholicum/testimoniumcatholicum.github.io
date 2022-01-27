@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Testimonium Catholicum</title>
+  <link rel="icon" href="chi-rho.png">
+</head>
+<body onload="displayTotalStatistics();createWikipediaLinks();">
+
+<h1 class="noselect">Testimonium Catholicum</h1>
+<p class="noselect">You know the name of a victim who is not on this list? <a href="mailto:testimoniumcatholicum@gmail.com">Contact us!</a></p>
+
+<style type="text/css">
+a {
+  color: black;
+  text-decoration: none;
+}
+
+a:hover
+{
+  color: gray;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  color: black;
+  font-family: "Garamond", Garamond, serif;
+  font-weight: bold;
+}
+
+p {
+  text-align: center;
+  color: black;
+  font-family: "Garamond", Garamond, serif;
+  font-weight: bold;
+}
+
+body {
+  text-align: center;
+  background-color: white;
+  color: black;
+  font-family: "Garamond", Garamond, serif;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+  background-color: #ffef96;
+  color: black;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+.inputClass {
+  width: 30%;
+  border: 2px solid gray;
+  border-right: 2px solid gray;
+  padding: 5px;
+  height: 20px;
+  border-radius: 5px 5px 5px 5px;
+  outline: none;
+  color: gray;
+  background-color: white;
+  font-family: "Garamond", Garamond, serif;
+  font-size: 17px;
+}
+
+
+footer {
+	background-color: gray;
+	color: white;
+}
+</style>
+
+<input type="text" id="myInput" onkeyup="searchFunction()" class="inputClass" placeholder="Search records...">
+
+<p id="Statistics">Total entries: 168</p>
+<table class="tableizer-table" id="myTable">
+<thead><tr class="tableizer-firstrow"><th>Birth Name</th><th>Birth Date</th><th>Death Date</th><th>Birth Place</th><th>Death Place</th><th>Death Cause</th><th>Occupation</th><th>Religious Order</th><th>Canonical Status</th></tr></thead><tbody>
+
+ <tr><td>Adalbert Probst</td><td>1900-07-27</td><td>1934-07-02</td><td>Regensburg</td><td>Braunlage</td><td>Gunshot</td><td>Youth leader</td><td>None</td><td>None</td></tr>
+ <tr><td>Adam Bargielski</td><td>1903-01-07</td><td>1942-09-08</td><td>Kalinowo</td><td>Dachau</td><td>Gunshot (probably)</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Adelaide Mardosewicz</td><td>1888-12-14</td><td>1943-08-01</td><td>Ciasnówka</td><td>Nowogródek</td><td>Gunshot</td><td>Nun</td><td>CSFN</td><td>Blessed</td></tr>
+ <tr><td>Aleksy Sobaszek</td><td>1895-07-17</td><td>1942-08-01</td><td>Przygodzice</td><td>Dachau</td><td>Unknown</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Alfons Maria Mazurek</td><td>1891-03-01</td><td>1944-08-28</td><td>Baranówka</td><td>Nawojowa Góra</td><td>Gunshot</td><td>Priest</td><td>OCD</td><td>Blessed</td></tr>
+ <tr><td>Alfred Delp</td><td>1907-09-15</td><td>1945-02-02</td><td>Mannheim</td><td>Plötzensee Prison</td><td>Hanging</td><td>Priest</td><td>SJ</td><td>None</td></tr>
+ <tr><td>Alicja Kotowska</td><td>1899-11-20</td><td>1939-11-11</td><td>Warsaw</td><td>Piaśnica</td><td>Gunshot</td><td>Nun</td><td>CR</td><td>Blessed</td></tr>
+ <tr><td>Alojs Andritzki</td><td>1914-07-02</td><td>1943-02-03</td><td>Radibor</td><td>Dachau</td><td>Lethal injection</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Alojzy Liguda</td><td>1898-01-23</td><td>1942-12-08</td><td>Winów</td><td>Dachau</td><td>Drowning (probably)</td><td>Priest</td><td>SVD</td><td>Blessed</td></tr>
+ <tr><td>Anastazy Jakub Pankiewicz</td><td>1882-07-09</td><td>1942-05-20</td><td>Nagórzany</td><td>Dachau</td><td>Poisonous gas</td><td>Priest</td><td>OFM</td><td>Blessed</td></tr>
+ <tr><td>Anicet Kopliński</td><td>1875-07-30</td><td>1941-10-16</td><td>Debrzno</td><td>Auschwitz</td><td>Poisonous gas (probably)</td><td>Priest</td><td>OFM Cap.</td><td>Blessed</td></tr>
+ <tr><td>Anna Kukołowicz</td><td>1892-08-24</td><td>1943-08-03</td><td>Barwaniszki</td><td>Nowogródek</td><td>Gunshot</td><td>Nun</td><td>CSFN</td><td>Blessed</td></tr>
+ <tr><td>Anton Schmid</td><td>1900-01-09</td><td>1942-02-13</td><td>Vienna</td><td>Stefanska Prison</td><td>Unknown (execution)</td><td>Electrician</td><td>None</td><td>None</td></tr>
+ <tr><td>Antoni Beszta-Borowski</td><td>1880-09-09 </td><td>1943-07-15</td><td>Borowskie Olki</td><td>Las Pilicki near Bielsk Podlaski</td><td>Gunshot</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Antoni Julian Nowowiejski</td><td>1858-02-11</td><td>1941-05-28</td><td>Lubienia</td><td>Działdowo</td><td>Gunshot (probably)</td><td>Bishop</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Antoni Leszczewicz</td><td>1890-09-30</td><td>1943-02-17</td><td>Abramowszczyzna</td><td>Rosica</td><td>Burning</td><td>Priest</td><td>MIC</td><td>Blessed</td></tr>
+ <tr><td>Antoni Rewera</td><td>1869-01-06 </td><td>1942-10-01</td><td>Samborzec</td><td>Dachau</td><td>Exhaustion</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Antoni Świadek</td><td>1909-03-27</td><td>1945-01-25</td><td>&nbsp;</td><td>Dachau</td><td>Typhus</td><td>Priest</td><td>CSICBVM</td><td>Blessed</td></tr>
+ <tr><td>Antoni Zawistowski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Bernhard Lichtenberg</td><td>1875-12-03</td><td>1943-11-05</td><td>Ohlau</td><td>Berlin to Dachau</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Bolesław Strzelecki</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Auschwitz</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Bronisław Komorowski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Stutthof</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Bronisław Kostkowski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Seminarian</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Brunon Zembol</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Religious</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Carl Lampert</td><td>1894-01-09</td><td>1944-11-13</td><td>Göfis</td><td>Halle an der Saale</td><td>Guillotine</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Christoph Probst</td><td>1912-11-06</td><td>1943-02-22</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Claus von Stauffenberg</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Army officer</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Czesław Jóźwiak</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Guillotine</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Dominik Jędrzejewski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Edith Stein</td><td>1891-12-12</td><td>1942-08-09</td><td>Breslau</td><td>Auschwitz-Birkenau</td><td>Poisonous gas</td><td>Nun</td><td>OCD</td><td>Saint</td></tr>
+ <tr><td>Eduard Müller</td><td>1911-08-20</td><td>1943-11-10</td><td>Neumünster</td><td>Hamburg</td><td>Guillotine</td><td>Priest</td><td>&nbsp;</td><td>Blessed</td></tr>
+ <tr><td>Edward Detkens</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Edward Grzymała</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Edward Kaźmierski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Guillotine</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Edward Klinik</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Guillotine</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Eleonora Aniela Jóźwik</td><td>1895-01-25</td><td>1943-08-04</td><td>Poizdów</td><td>Nowogródek</td><td>Gunshot</td><td>Nun</td><td>CSFN</td><td>Blessed</td></tr>
+ <tr><td>Élise Rivet</td><td>1890-01-19</td><td>1945-03-30</td><td>Draria</td><td>Ravensbrück</td><td>Poisonous gas</td><td>Nun</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Emil Szramek</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Engelmar Unzeitig</td><td>1911-03-01</td><td>1945-03-02</td><td>Greifendorf</td><td>Dachau</td><td>Typhoid</td><td>Priest</td><td>CMM</td><td>Blessed</td></tr>
+ <tr><td>Erich Klausener</td><td>1885-01-25</td><td>1934-06-30</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Politician</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Eugenia Mackiewicz</td><td>1903-11-27</td><td>1943-08-08</td><td>Suwałki</td><td>Nowogródek</td><td>Gunshot</td><td>Nun</td><td>CSFN</td><td>Blessed</td></tr>
+ <tr><td>Euzebiusz Huchracki</td><td>1885-10-15</td><td>1942-05-06</td><td>Katowice</td><td>Dachau</td><td>Unknown</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Ewa Noiszewska</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Religious</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Fidelis Chojnacki</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Florian Stępniak</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Franciszek Dachtera</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Franciszek Drzewiecki</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Franciszek Kęsy</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Guillotine</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Franciszek Nogalski</td><td>1911-01-16</td><td>1939-10-24</td><td>Wąbrzeźno</td><td>Rudzki Most</td><td>Gunshot</td><td>Priest</td><td>None</td><td>Servant of God</td></tr>
+ <tr><td>Franciszek Rogaczewski</td><td>1892-12-23</td><td>1940-01-11</td><td>Lipinki</td><td>Stutthof</td><td>Gunshot</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Franciszek Rosłaniec</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Franciszek Stryjas</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Guillotine</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Franz Jägerstätter</td><td>1907-05-20</td><td>1943-08-09</td><td>&nbsp;</td><td>Brandenburg an der Havel</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Franz Reinisch</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Guillotine</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Fritz Gerlich</td><td>1883-02-15</td><td>1934-06-30</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Journalist</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Georg Häfner</td><td>1900-10-19</td><td>1942-08-20</td><td>Würzburg</td><td>Dachau</td><td>Malnutrition</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Gerhard Hirschfelder</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Giovanni Fornasini</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Giuseppe Girotti</td><td>1905-07-19</td><td>1945-04-01</td><td>Alba</td><td>Dachau</td><td>Lethal injection (probably)</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Grzegorz Bolesław Frąckowiak</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Religious</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Helena Cierpka</td><td>1900-04-11</td><td>1943-08-06</td><td>Granowiec</td><td>Nowogródek</td><td>Gunshot</td><td>Nun</td><td>CSFN</td><td>Blessed</td></tr>
+ <tr><td>Henri von Oostayen</td><td>1906-02-15</td><td>1945-04-19</td><td>&nbsp;</td><td>Bergen-Belsen</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Henryk Hlebowicz</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Borisov</td><td>Gunshot</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Henryk Kaczorowski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Henryk Krzysztofik</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Hermann Lange</td><td>1912-04-16</td><td>1943-11-10</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Hilary Paweł Januszewski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Jadwiga Karolina Żak</td><td>1892-12-29</td><td>1943-08-02</td><td>Oświęcim</td><td>Nowogródek</td><td>Gunshot</td><td>Nun</td><td>CSFN</td><td>Blessed</td></tr>
+ <tr><td>Jakob Gapp</td><td>1897-07-26</td><td>1943-08-13</td><td>&nbsp;</td><td>Plötzensee Prison</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Jan Antonin Bajewski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Auschwitz</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Jan Franciszek Czartoryski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Jan Nepomucen Chrzan</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Jarogniew Wojciechowski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Jerzy Kaszyra</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Rosica</td><td>Burning</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Johannes Prassek</td><td>1911-08-13</td><td>1943-11-10</td><td>Barmbek</td><td>Hamburg</td><td>Guillotine</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Josef Mayr-Nusser</td><td>1910-12-27</td><td>1945-02-24</td><td>Bozen</td><td>Dachau</td><td>Dysentery</td><td>&nbsp;</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Józef Achilles Puchała</td><td>1911-03-18</td><td>1943-07-19</td><td>Kosina</td><td>Near Iwieniec</td><td>Torture</td><td>Priest</td><td>OFM</td><td>Blessed</td></tr>
+ <tr><td>Józef Cebula</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Mauthausen</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Józef Cyrek</td><td>1904-09-13</td><td>1940-09-02</td><td>Bysina</td><td>Auschwitz</td><td>Malnutrition</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Józef Czempiel</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Mauthausen</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Józef Innocenty Guz</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Sachsenhausen</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Józef Jankowski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Auschwitz</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Józef Kowalski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Józef Kurzawa</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Józef Kut</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Józef Pawłowski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Józef Stanek</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Warsaw</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Józef Straszewski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Dachau</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Józef Zapłata</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Religious</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Józefa Chrobot</td><td>1896-05-22</td><td>1943-08-05</td><td>Raczyna</td><td>Nowogródek</td><td>Gunshot</td><td>Nun</td><td>CSFN</td><td>Blessed</td></tr>
+ <tr><td>Julia Rapiej</td><td>1900-08-18</td><td>1943-08-07</td><td>Rogożyn</td><td>Nowogródek</td><td>Gunshot</td><td>Nun</td><td>CSFN</td><td>Blessed</td></tr>
+ <tr><td>Julia Rodzińska</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Religious</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Karl Leisner</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Karol Herman Stępień</td><td>1910-10-21</td><td>1943-07-19</td><td>Lodz</td><td>Borowikowszczyzna</td><td>Death by fire</td><td>Priest</td><td>OFM</td><td>Blessed</td></tr>
+ <tr><td>Katarzyna Celestyna Faron</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Religious</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Kazimierz Gostyński</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Kazimierz Grelewski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Kazimierz Sykulski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Krystyn Gondek</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Leokadia Matuszewska</td><td>1906-02-08</td><td>1943-08-10</td><td>Stara Huta</td><td>Nowogródek</td><td>Gunshot</td><td>Nun</td><td>CSFN</td><td>Blessed</td></tr>
+ <tr><td>Leon Nowakowski</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Leon Poeplau</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Leon Wetmański</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Soldau</td><td>&nbsp;</td><td>Bishop</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Louis-Adrien Favre</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Ludwik Mzyk</td><td>1905-04-22</td><td>1940-02-20</td><td>Chrozów</td><td>Posen</td><td>Gunshot</td><td>Priest</td><td>SVD</td><td>Blessed</td></tr>
+ <tr><td>Ludwik Pius Bartosik</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Ludwik Roch Gietyngier</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Maksymilian Binkiewicz</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Priest</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Marcel Callo</td><td>1921-12-06</td><td>1945-03-19</td><td>Rennes</td><td>Mauthausen</td><td>Tuberculosis</td><td>Unknown</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Marcin Oprządek</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Religious</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Maria Antonina Kratochwil</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Torture</td><td>Nun</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Maria Klemensa Staszewska</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>Religious</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+ <tr><td>Maria Restituta Kafka</td><td>1894-05-01</td><td>1943-03-30</td><td>Husovice</td><td>Vienna</td><td>Guillotine</td><td>Religious</td><td>SFCC</td><td>Blessed</td></tr>
+ <tr><td>Maria Terwiel</td><td>1910-06-07</td><td>1943-08-05</td><td>Boppard</td><td>Plötzensee Prison</td><td>Guillotine</td><td>Typist</td><td>None</td><td>None</td></tr>
+ <tr><td>Marian Gorecki</td><td>1903-05-02</td><td>1940-03-22</td><td>Poznań</td><td>Stutthof</td><td>Gunshot</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Marian Konopiński</td><td>1907-09-10</td><td>1943-01-01</td><td>Kluczewo</td><td>Dachau</td><td>Medical experiments</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Marian Skrzypczak</td><td>1909-04-15</td><td>1939-10-05</td><td>Janowiec Wielkopolski</td><td>Płonkowo</td><td>Gunshot</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Marianna Biernacka</td><td>1888-??-??</td><td>1943-07-13</td><td>Lipsk</td><td>Naumowicze</td><td>Gunshot</td><td>Housewife</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Marta Wołowska</td><td>1879-10-12</td><td>1942-12-19</td><td>Lublin</td><td>Słonim</td><td>Gunshot</td><td>Nun</td><td>CSICBVM</td><td>Blessed</td></tr>
+ <tr><td>Max Josef Metzger</td><td>1887-02-03</td><td>1944-04-17</td><td>Schopfheim</td><td>Brandenburg-Görden Prison</td><td>Unknown (execution)</td><td>Priest</td><td>None</td><td>None</td></tr>
+ <tr><td>Maximilian Kolbe</td><td>1894-01-08</td><td>1941-08-14</td><td>Zdunska Wola</td><td>Auschwitz-Birkenau</td><td>Lethal injection</td><td>Priest</td><td>OFMC</td><td>Saint</td></tr>
+ <tr><td>Michał Kozal</td><td>1893-09-27</td><td>1943-01-26</td><td>Nowy Folwark</td><td>Dachau</td><td>Lethal injection</td><td>Bishop</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Michał Oziębłowski</td><td>1900-09-28</td><td>1942-07-31</td><td>Izdebno Kościelne</td><td>Dachau</td><td>Unknown</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Michał Piaszczyński</td><td>1885-11-01</td><td>1940-12-18</td><td>Łomża</td><td>Sachsenhausen</td><td>Exhaustion</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Michał Woźniak</td><td>1875-09-09</td><td>1942-05-16</td><td>Suchy</td><td>Dachau</td><td>Unknown</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Mieczysław Bohatkiewicz</td><td>1904-01-01</td><td>1942-03-04</td><td>Krykały</td><td>Berezwecz</td><td>Gunshot</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Mieczysława Kowalska</td><td>1902-01-01</td><td>1941-07-25</td><td>Warsaw</td><td>Soldau</td><td>Tuberculosis</td><td>Nun</td><td>OSCCap</td><td>Blessed</td></tr>
+ <tr><td>Narcyz Putz</td><td>1877-10-28</td><td>1942-12-05</td><td>Sieraków</td><td>Dachau</td><td>Pneumonia</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Narcyz Turchan</td><td>1879-09-19</td><td>1942-03-19</td><td>Biskupice</td><td>Dachau</td><td>Unknown</td><td>Priest</td><td>OFM</td><td>Blessed</td></tr>
+ <tr><td>Natalia Tułasiewicz</td><td>1906-04-09</td><td>1945-03-31</td><td>Poznań</td><td>Ravensbrück</td><td>Poisonous gas</td><td>Teacher</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Nikolaus Gross</td><td>1898-09-30</td><td>1945-01-23</td><td>Niederwenigern</td><td>Plötzensee prison</td><td>Hanging</td><td>Journalist</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Odoardo Focherini</td><td>1907-06-06</td><td>1944-12-27</td><td>Carpi</td><td>Hersbruck</td><td>Unknown</td><td>Journalist</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Omelyan Kovch</td><td>1884-08-20</td><td>1944-03-25</td><td>Tlumach</td><td>Majdanek</td><td>Unknown</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Otto Müller</td><td>1870-12-09</td><td>1944-10-12</td><td>Eckenhagen</td><td>Berlin</td><td>Unknown</td><td>Priest</td><td>None</td><td>None</td></tr>
+ <tr><td>Otto Neururer</td><td>1882-03-25</td><td>1940-05-30</td><td>Piller</td><td>Dachau</td><td>Hanging</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Paulina Borowik</td><td>1905-08-30</td><td>1943-08-09</td><td>Rudno</td><td>Nowogródek</td><td>Gunshot</td><td>Nun</td><td>CSFN</td><td>Blessed</td></tr>
+ <tr><td>Piotr Bonifacy Żukowski</td><td>1913-01-13</td><td>1942-04-10</td><td>Vilnius-Trock</td><td>Auschwitz-Birkenau</td><td>Pneumonia</td><td>Religious</td><td>OFMConv</td><td>Blessed</td></tr>
+ <tr><td>Piotr Edward Dankowski</td><td>1908-06-21</td><td>1942-04-03</td><td>Jordanow</td><td>Auschwitz</td><td>Exhaustion</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Richard Henkes</td><td>1900-05-26</td><td>1945-02-22</td><td>Ruppach</td><td>Dachau</td><td>Typhus</td><td>Priest</td><td>SAC</td><td>Blessed</td></tr>
+ <tr><td>Roman Archutowski</td><td>1882-08-05</td><td>1943-04-18</td><td>Karolina</td><td>Majdanek</td><td>Typhus</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Roman Sitko</td><td>1880-03-30</td><td>1942-10-12</td><td>Czarna Sędziszowska</td><td>Auschwitz-Birkenau</td><td>Unknown (murder)</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Stanisław Kubista</td><td>1898-09-27</td><td>1949-04-26</td><td>Kostuchno</td><td>Sachsenhausen</td><td>Unknown (murder)</td><td>Priest</td><td>SVD</td><td>Blessed</td></tr>
+ <tr><td>Stanisław Kubski</td><td>1876-08-13</td><td>1942-05-18</td><td>Książ</td><td>Hartheim</td><td>Unknown</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Stanisław Mysakowski</td><td>1896-09-15</td><td>1942-10-30</td><td>Wojsławice</td><td>Dachau</td><td>Poisonous gas</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Stanisław Pyrtek</td><td>1913-03-21</td><td>1942-03-04</td><td>Bystra Podhalańska</td><td>Berezwecz</td><td>Gunshot</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Stanisław Starowieyski</td><td>1895-05-11</td><td>1941-04-13</td><td>Ustrobna</td><td>Dachau</td><td>Beaten to death (probably)</td><td>Captain</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Stanisław Tymoteusz Trojanowski</td><td>1908-29-07</td><td>1942-02-28</td><td>Sadłowo</td><td>Auschwitz-Birkenau</td><td>Pneumonia</td><td>Religious</td><td>OFMConv</td><td>Blessed</td></tr>
+ <tr><td>Stefan Grelewski</td><td>1898-07-03</td><td>1941-05-09</td><td>Dwikozy</td><td>Dachau</td><td>Starvation</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Stefan Wincenty Frelichowski</td><td>1913-01-22</td><td>1945-02-23</td><td>Chełmża</td><td>Dachau</td><td>Typhus</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Symforian Ducki</td><td>1888-05-10</td><td>1942-04-11</td><td>Warsaw</td><td>Auschwitz</td><td>Unknown</td><td>Religious</td><td>OFMCap</td><td>Blessed</td></tr>
+ <tr><td>Tadeusz Dulny</td><td>1914-08-08</td><td>1942-08-07</td><td>Krzczonowice</td><td>Dachau</td><td>Starvation</td><td>Seminarian</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Teresa Bracco</td><td>1924-02-24</td><td>1944-08-28</td><td>Santa Giulia</td><td>Santa Giulia</td><td>Gunshot</td><td>Farmer</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Teresio Olivelli</td><td>1916-01-07</td><td>1945-01-12</td><td>Bellagio</td><td>Hersbruck</td><td>Beaten to death</td><td>Soldier</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Titus Brandsma</td><td>1881-02-23</td><td>1942-06-26</td><td>Oegeklooster</td><td>Dachau</td><td>Lethal injection</td><td>Priest</td><td>OCarm</td><td>Blessed</td></tr>
+ <tr><td>Veronika Narmontowicz</td><td>1916-12-18</td><td>1943-08-11</td><td>Wiercieliszki</td><td>Nowogródek</td><td>Gunshot</td><td>Nun</td><td>CSFN</td><td>Blessed</td></tr>
+ <tr><td>Vincent Hadleŭski</td><td>1888-11-06</td><td>1942-12-24</td><td>Porozowo</td><td>Maly Trostenets</td><td>Gunshot</td><td>Priest</td><td>None</td><td>None</td></tr>
+ <tr><td>Wilhelm Graf</td><td>1918-02-02</td><td>1943-10-12</td><td>Kuchenheim</td><td>Stadelheim Prison</td><td>Guillotine</td><td>Student</td><td>None</td><td>Servant of God</td></tr>
+ <tr><td>Wincenty Matuszewski</td><td>1869-03-03</td><td>1940-05-24</td><td>Wola Chruścińska</td><td>Witów-Kolonia</td><td>Gunshot (probably)</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Władysław Błądziński</td><td>1908-07-06</td><td>1944-09-08</td><td>Myślatycze</td><td>Gross-Rosen</td><td>Unknown</td><td>Priest</td><td>CSMA</td><td>Blessed</td></tr>
+ <tr><td>Władysław Demski</td><td>1884-08-05</td><td>1940-05-28</td><td>Straszewo</td><td>Sachsenhausen</td><td>Gunshot (probably)</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Władysław Goral</td><td>1898-05-01 </td><td>1945-02-??</td><td>Stoczek</td><td>Sachsenhausen</td><td>Gunshot (probably)</td><td>Bishop</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Władysław Maćkowiak</td><td>1910-11-27</td><td>1942-03-04</td><td>Sytki</td><td>Berezwecz</td><td>Gunshot</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Władysław Mączkowski</td><td>1911-06-24</td><td>1942-08-20</td><td>Ołocz</td><td>Dachau</td><td>Exhaustion</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Władysław Miegoń</td><td>1892-09-30</td><td>1942-10-15</td><td>Sambork</td><td>Dachau</td><td>Torture (probably)</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Włodzimierz Laskowski</td><td>1886-01-30</td><td>1940-08-08</td><td>Rogoźno</td><td>Mauthausen-Gusen</td><td>Torture (probably)</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Wojciech Nierychlewski</td><td>1903-04-20</td><td>1942-02-07</td><td>Dąbrowice</td><td>Auschwitz</td><td>Gunshot (probably)</td><td>Priest</td><td>CSMA</td><td>Blessed</td></tr>
+ <tr><td>Zygmunt Pisarski</td><td>1902-04-24</td><td>1943-01-30</td><td>Krasnystaw</td><td>Gdeszyn</td><td>Unknown (murder)</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+ <tr><td>Zygmunt Sajna</td><td>1897-01-20</td><td>1940-09-17</td><td>Żurawlówka</td><td>Palmiry</td><td>Gunshot</td><td>Priest</td><td>None</td><td>Blessed</td></tr>
+</tbody></table>
+<footer>
+<b>Reference:</b><br>CSICBVM = Congregationes seu sodalitates B. Mariæ Virginis
+</footer>
+
+<script>
+function searchFunction() {  
+  // Declare variables 
+  var i, i2, tds;
+  var input = document.getElementById("myInput");
+  var filter = input.value.toUpperCase();
+  var table = document.getElementById("myTable");
+  var trs = table.tBodies[0].getElementsByTagName("tr");
+  var tdInnerText;
+  var count = 0;
+  
+  if (input.value === "") {
+	displayTotalStatistics();
+	return;
+  }
+
+  // Loop through first tbody's rows
+  for (i = 0; i < trs.length; i++) {
+
+    // define the row's cells
+    tds = trs[i].getElementsByTagName("td");
+	
+    // hide the row
+    trs[i].style.display = "none";
+
+    // loop through row cells
+    for (i2 = 0; i2 < tds.length; i2++) {
+	  tdInnerText = tds[i2].innerHTML;
+      // if there's a match
+      if (tdInnerText.toUpperCase().indexOf(filter) > -1) {
+		// show the row
+        trs[i].style.display = "";
+		count++;
+
+        // skip to the next row
+        continue;
+      }
+    }
+  }
+  document.getElementById('Statistics').innerHTML = "Number of coincidences: " + count;
+}
+
+// To Do: Add page for showing statistics as charts (use JS library).
+
+function displayTotalStatistics() {
+  var table = document.getElementById("myTable");
+  var trs = table.getElementsByTagName("tr");
+  var len = trs.length;
+  
+  var i, j, tdInnerText;
+  
+  for (i = 0; i < len; i++) {
+	// Display all trs again if the input is empty
+    trs[i].style.display = "";
+  }
+  
+  document.getElementById('Statistics').innerHTML = "Total entries:   " + --len;
+}
+
+function createWikipediaLinks() {  
+  // Declare variables 
+  var i, tds;
+  var table = document.getElementById("myTable");
+  var trs = table.tBodies[0].getElementsByTagName("tr");
+  var tdInnerText;
+  
+  // Loop through first tbody's rows
+  for (i = 0; i < trs.length; i++) {
+
+    // define the row's cells
+    tds = trs[i].getElementsByTagName("td");
+	
+	// Convert every entry in the first column to a Wikipedia article link
+	tds[0].innerHTML = convertToWiki(tds[0].innerHTML);
+  }
+}
+
+function convertToWiki(fullName) {
+  var originalName = fullName;
+  fullName = fullName.split(' ').join('_');
+
+					
+  fullName = "<a href=" +
+  "\"https://en.wikipedia.org/wiki/" + fullName + 
+  "\"target=\"_blank\" rel=\"noopener noreferrer\">" + 
+  originalName +
+  "</a>";
+  
+  return fullName;
+}
+</script>
+</body>
+</html>
