@@ -6,9 +6,6 @@
 </head>
 <body onload="displayTotalStatistics();createWikipediaLinks();">
 
-<h1 class="noselect">Testimonium Catholicum</h1>
-<p class="noselect">You know the name of a victim who is not on this list? <a href="mailto:testimoniumcatholicum@gmail.com">Contact us!</a></p>
-
 <style type="text/css">
 a {
   color: black;
@@ -90,9 +87,16 @@ footer {
 }
 </style>
 
+
+
+<h1 class="noselect">Testimonium Catholicum</h1>
+<p class="noselect">You know the name of a victim who is not on this list? <a href="mailto:testimoniumcatholicum@gmail.com">Contact us!</a></p>
+
 <input type="text" id="myInput" onkeyup="searchFunction()" class="inputClass" placeholder="Search records...">
 
-<p id="Statistics">Total entries:&nbsp;&nbsp;&nbsp;&nbsp;</p>
+<p class="noselect"><i>Click on the name to read the corresponding Wikipedia article.</i></p>
+
+<p id="Statistics" class="noselect">Total entries:&nbsp;&nbsp;&nbsp;&nbsp;</p>
 <table class="tableizer-table" id="myTable">
 <thead><tr class="tableizer-firstrow"><th>Birth Name</th><th>Birth Date</th><th>Death Date</th><th>Birth Place</th><th>Death Place</th><th>Death Cause</th><th>Occupation</th><th>Religious Order</th><th>Canonical Status</th></tr></thead><tbody>
 
