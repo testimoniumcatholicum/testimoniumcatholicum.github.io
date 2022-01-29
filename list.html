@@ -1,93 +1,92 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Testimonium Catholicum</title>
-  <link rel="icon" href="chi-rho.png">
+	<title>Testimonium Catholicum</title>
+	<link rel="icon" href="chi-rho.png">
+  
+	<style type="text/css">
+	a {
+	  color: black;
+	  text-decoration: none;
+	}
+
+	a:hover
+	{
+	  color: gray;
+	  text-decoration: none;
+	}
+
+	h1 {
+	  text-align: center;
+	  color: black;
+	  font-family: "Garamond", Garamond, serif;
+	  font-weight: bold;
+	}
+
+	p {
+	  text-align: center;
+	  color: black;
+	  font-family: "Garamond", Garamond, serif;
+	  font-weight: bold;
+	}
+
+	body {
+	  text-align: center;
+	  background-color: white;
+	  color: black;
+	  font-family: "Garamond", Garamond, serif;
+	}
+
+	table {
+	  border-collapse: collapse;
+	  width: 100%;
+	}
+
+	th, td {
+	  text-align: left;
+	  padding: 8px;
+	}
+
+	tr:nth-child(even){background-color: #f2f2f2}
+
+	th {
+	  background-color: #ffef96;
+	  color: black;
+	}
+
+	.noselect {
+	  -webkit-touch-callout: none; /* iOS Safari */
+		-webkit-user-select: none; /* Safari */
+		 -khtml-user-select: none; /* Konqueror HTML */
+		   -moz-user-select: none; /* Old versions of Firefox */
+			-ms-user-select: none; /* Internet Explorer/Edge */
+				user-select: none; /* Non-prefixed version, currently
+									  supported by Chrome, Edge, Opera and Firefox */
+	}
+
+	.inputClass {
+	  width: 30%;
+	  border: 2px solid gray;
+	  border-right: 2px solid gray;
+	  padding: 5px;
+	  height: 20px;
+	  border-radius: 5px 5px 5px 5px;
+	  outline: none;
+	  color: gray;
+	  background-color: white;
+	  font-family: "Garamond", Garamond, serif;
+	  font-size: 17px;
+	}
+
+
+	footer {
+		background-color: gray;
+		color: white;
+	}
+	</style>
+
 </head>
 <body onload="displayTotalStatistics();createWikipediaLinks();">
-
-<style type="text/css">
-a {
-  color: black;
-  text-decoration: none;
-}
-
-a:hover
-{
-  color: gray;
-  text-decoration: none;
-}
-
-h1 {
-  text-align: center;
-  color: black;
-  font-family: "Garamond", Garamond, serif;
-  font-weight: bold;
-}
-
-p {
-  text-align: center;
-  color: black;
-  font-family: "Garamond", Garamond, serif;
-  font-weight: bold;
-}
-
-body {
-  text-align: center;
-  background-color: white;
-  color: black;
-  font-family: "Garamond", Garamond, serif;
-}
-
-table {
-  border-collapse: collapse;
-  width: 100%;
-}
-
-th, td {
-  text-align: left;
-  padding: 8px;
-}
-
-tr:nth-child(even){background-color: #f2f2f2}
-
-th {
-  background-color: #ffef96;
-  color: black;
-}
-
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-     -khtml-user-select: none; /* Konqueror HTML */
-       -moz-user-select: none; /* Old versions of Firefox */
-        -ms-user-select: none; /* Internet Explorer/Edge */
-            user-select: none; /* Non-prefixed version, currently
-                                  supported by Chrome, Edge, Opera and Firefox */
-}
-
-.inputClass {
-  width: 30%;
-  border: 2px solid gray;
-  border-right: 2px solid gray;
-  padding: 5px;
-  height: 20px;
-  border-radius: 5px 5px 5px 5px;
-  outline: none;
-  color: gray;
-  background-color: white;
-  font-family: "Garamond", Garamond, serif;
-  font-size: 17px;
-}
-
-
-footer {
-	background-color: gray;
-	color: white;
-}
-</style>
-
-
 
 <h1 class="noselect">Testimonium Catholicum</h1>
 <p class="noselect">You know the name of a victim who is not on this list? <a href="mailto:testimoniumcatholicum@gmail.com">Contact us!</a></p>
